@@ -5,26 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
-   function validate()
-   {
-      var username = document.getElementsByName("username")[0];
-      var password = document.getElementsByName("password")[0];
-      
-      if(username.Value.length < 1){
-          alert("用户名不为空! ");
-          return false;
-      }
-      
-      if(password.value.length < 1){
-         alert(" 密码不能为空");
-         return false;
-      }
-   }
-</script>
 </head>
 <body>
-	<form action="#"  onsubmit="return validate();">
+	<form action="#" id="intresting_form" name="intresting_form">
 		用户名: <input type="text" name="username" /><br /> 
 		密码: <input type="password" name="password" /><br /> 
 		性别: 男 <input type="radio"name="gender" value="男" /> &nbsp;&nbsp; 
@@ -43,4 +26,6 @@
 			type="reset" name="重置" /><br />
 	</form>
 </body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/intresting.js"></script>
 </html>
