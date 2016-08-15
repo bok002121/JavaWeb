@@ -21,6 +21,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
+    <!-- <Context path="/priceManger" docBase="E:\cyc\code\javacode\JavaWeb\priceManger\WebRoot" reloadable="true"></Context> -->
+    
     This is my JSP page. <br>
   </body>
 </html>
