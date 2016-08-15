@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="#" id="intresting_form" name="intresting_form">
+	<form action="/priceManger/ProcessServlet" id="intresting_form" name="intresting_form">
 		用户名: <input type="text" name="username" /><br /> 
 		密码: <input type="password" name="password" /><br /> 
 		性别: 男 <input type="radio"name="gender" value="男" /> &nbsp;&nbsp; 

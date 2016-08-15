@@ -28,7 +28,7 @@ var checkIntrestingForm = function(){
 		alert("password is empty");
 		return false;
 	}
-	if(username.length < 4 || password.length > 6){
+	if(username.length < 4 || username.length > 6){
 		alert("userlength betweend 4-6");
 		return false;
 	}
