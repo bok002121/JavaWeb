@@ -25,4 +25,9 @@ public class InitServlet extends HttpServlet
     	// TODO Auto-generated method stub
     	System.out.println("get invoked");
     }
+    
+    @Override
+    public void destroy(){
+    	System.out.println("destroy invoked");
+    }
 }
