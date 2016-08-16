@@ -26,6 +26,8 @@ public class ProcessServlet extends HttpServlet
 	 *             if an error occurred
 	 * @throws IOException
 	 *             if an error occurred
+	 *             
+	 *    init(),destroy(),service()
 	 */
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException
@@ -65,6 +67,8 @@ public class ProcessServlet extends HttpServlet
 		String[] interest = request.getParameterValues("interest");
 		String address = request.getParameter("address");
 		String comment = request.getParameter("comment");
+		
+		//address = new String(address.getBytes("ios-88591"),"utf-8");
 
 		List<String> list = new ArrayList<String>();
 
