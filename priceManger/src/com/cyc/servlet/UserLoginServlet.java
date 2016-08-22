@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.jms.Session;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cyc.bean.User;
 
@@ -37,12 +39,54 @@ public class UserLoginServlet extends HttpServlet
 		String password = req.getParameter("password");
 		String auth = req.getParameter("auth");
 		
+		User user = new User();
+		HttpSession session = req.getSession();
+		
 		if( "1".equals(auth))
 		{
 			if("zhangsan".equals(username) && "123".equals(password))
 			{
-				User user = new User();
+				user.setUsername(username);
+				user.setPassword(password);
+				user.setAuth(auth);
+				
+				session.setAttribute("user", user);
+				
+				req.getRequestDispatcher("session/index.jsp").forward(req,resp);
 			}
+			else
+			{
+				RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
+				
+				rd.forward(req, resp);
+			}
+		}
+		else if( "2".equals(auth))
+		{
+			if("lisi".equals(username) && "456".equals(password))
+			{
+				user.setUsername(username);
+				user.setPassword(password);
+				user.setAuth(auth);
+				
+				session.setAttribute("user", user);
+				
+                session.setAttribute("user", user);
+				
+				req.getRequestDispatcher("session/index.jsp").forward(req,resp);
+			}
+			else
+			{
+				RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
+				
+				rd.forward(req, resp);
+			}
+		}
+		else
+		{
+			RequestDispatcher rd = req.getRequestDispatcher("session/login.jsp");
+			
+			rd.forward(req, resp);
 		}
 	}
 
