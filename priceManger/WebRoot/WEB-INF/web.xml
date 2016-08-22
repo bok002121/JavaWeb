@@ -38,6 +38,11 @@
     <servlet-name>CookieServlet</servlet-name>
     <servlet-class>com.cyc.servlet.CookieServlet</servlet-class>
   </servlet>
+  <servlet>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>com.cyc.servlet.UserLoginServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -72,6 +77,10 @@
   <servlet-mapping>
     <servlet-name>CookieServlet</servlet-name>
     <url-pattern>/CookieServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/UserLoginServlet</url-pattern>
   </servlet-mapping>	
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
