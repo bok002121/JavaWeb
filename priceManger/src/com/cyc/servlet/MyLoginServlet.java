@@ -34,8 +34,8 @@ public class MyLoginServlet extends HttpServlet
 
 				session.setAttribute("user", user);
 
-				//req.getRequestDispatcher("filter/index.jsp").forward(req, resp);
-				resp.sendRedirect("filter/index.jsp");
+				req.getRequestDispatcher("filter/index.jsp").forward(req, resp);
+				//resp.sendRedirect("filter/index.jsp");
 			} 
 			else
 			{
