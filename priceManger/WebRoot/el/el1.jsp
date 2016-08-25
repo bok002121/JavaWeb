@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*,com.cyc.bean.Person" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -29,5 +29,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </form>
     
     <% session.setAttribute("hello", "world"); %>
+    
+    <% Person p = new Person();
+       session.setAttribute("person", p); %>    
   </body>
 </html>

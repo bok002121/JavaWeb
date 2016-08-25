@@ -23,12 +23,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    username: <%=request.getParameter("username") %>
+    username: <%=request.getParameter("username") %> <br />
     
-    el username: ${ param.username }
+    el username: ${ param.username } <br />
     
-    <br />
+    ${sessionScope.hello } <br />
     
-    ${sessionScope.hello }
+    ${sessionScope.person.name } <br />
   </body>
 </html>
