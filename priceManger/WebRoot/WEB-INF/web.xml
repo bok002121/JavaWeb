@@ -140,6 +140,27 @@
     <servlet-name>AjaxServlet</servlet-name>
     <servlet-class>com.cyc.servlet.AjaxServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MyAjaxServlet</servlet-name>
+    <servlet-class>com.cyc.servlet.MyAjaxServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>XMServlet</servlet-name>
+    <servlet-class>com.cyc.servlet.XMServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GSonServlet</servlet-name>
+    <servlet-class>com.cyc.servlet.GSonServlet</servlet-class>
+  </servlet>
+
+
+
 
 
 
@@ -226,6 +247,18 @@
   <servlet-mapping>
     <servlet-name>AjaxServlet</servlet-name>
     <url-pattern>/AjaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyAjaxServlet</servlet-name>
+    <url-pattern>/MyAjaxServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>XMServlet</servlet-name>
+    <url-pattern>/XMServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GSonServlet</servlet-name>
+    <url-pattern>/GSonServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
